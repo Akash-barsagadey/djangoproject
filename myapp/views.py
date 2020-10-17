@@ -5,3 +5,18 @@ from django.http import HttpResponse,JsonResponse
 
 def myfunctioncall(request):
     return HttpResponse("Hello word")
+
+
+def myfunctionabout(request):
+    return HttpResponse("About  Response")
+    
+def add(request,a,b):
+    return HttpResponse(a+b)
+
+def intro(request,name,age):
+    mydictionary = {
+        "name" :name,
+        "age":age
+    }
+    return JsonResponse(mydictionary)
+    

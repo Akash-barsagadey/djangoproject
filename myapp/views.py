@@ -4,8 +4,9 @@ from .forms import *
 
 # Create your views here.
 
+
 def myfunctioncall(request):
-    return HttpResponse("Hello word")
+    return HttpResponse("Home  Page")
 
 
 def myfunctionabout(request):
@@ -113,3 +114,7 @@ def myform2(request):
             "form" : form
         }
         return render(request,'myform2.html',context=mydictionary)
+
+
+def error_404_view(request,exception):
+    return render(request,'404.html')
